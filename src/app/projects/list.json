@@ -12,15 +12,15 @@
 		"github": "https://github.com/sikenali/DTOLPK"
 	},
 	{
-		"name": "DTOLPK",
+		"name": "bid-assistant",
 		"year": 2025,
-		"description": "一个Docker转LPK文件格式的图形化工具",
+		"description": "building",
 		"image": "https://files.codelife.cc/website/github.svg",
 		"url": "",
 		"tags": [
 			"Vue",
 			"JavaScript"
 		],
-		"github": "https://github.com/sikenali/DTOLPK"
+		"github": "https://github.com/sikenali/bid-assistant"
 	}
 ]
