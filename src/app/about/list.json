@@ -1,5 +1,5 @@
 {
 	"title": "About",
-	"description": "一个基于 Github 的现代化博客系统",
-	"content": "📦网站基于 Github 仓库完全存储，所有内容版本可控\n\n🚀无后端，无 serverless function，纯静态站点\n\n✏️文章通过可视化 UI 直接编辑并提交到 Github 仓库\n\n🔑所有用户都可以编辑，提交需要 Owner 的 Private Key\n\n## 技术栈\n\n- Next.js\n- React\n- TypeScript\n- Tailwind CSS\n- Motion\n- Github API"
+	"description": "一个不会编（AI）程（Coding）的商务、产品、运营、测试的开发，不是一个好的项目经理",
+	"content": "📦域名的来源，20491001被注册后只能反其道而行\n\n🚀2008年计科专业毕业，码农水平有限，多亏赶AI编程时代\n\n✏️早期从事华为OD，PMS行业，近10年一直从事操作系统行业领域\n\n## 兴趣爱好\n\n- 养花种菜\n- 象棋\n- 台球\n- 自驾旅游\n- 折腾技术\n- 喜欢新事物"
 }
