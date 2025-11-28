@@ -58,7 +58,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 			await handleSave()
 		} catch (error) {
 			console.error('Failed to read private key:', error)
-			toast.error('读取密钥文件失败')
+			toast.error('Failed to read the key file')
 		}
 	}
 
@@ -81,7 +81,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 			onClose()
 		} catch (error: any) {
 			console.error('Failed to save:', error)
-			toast.error(`保存失败: ${error?.message || '未知错误'}`)
+			toast.error(`Save Failed: ${error?.message || 'Unknown Error'}`)
 		} finally {
 			setIsSaving(false)
 		}
@@ -162,7 +162,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 	}
 
 	const handleRandomizeColors = () => {
-		const count = Math.floor(Math.random() * 5) + 4 // 4 ~ 8 个颜色
+		const count = Math.floor(Math.random() * 5) + 4 // 4 ~ 8 colors
 		const backgroundColors = Array.from({ length: count }, () => generateRandomColor())
 		const colorBrand = generateRandomColor()
 
@@ -195,7 +195,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 		if (!file) return
 
 		if (!file.type.startsWith('image/')) {
-			toast.error('请选择图片文件')
+			toast.error('Please select an image file')
 			return
 		}
 
@@ -210,7 +210,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 		if (!file) return
 
 		if (!file.type.startsWith('image/')) {
-			toast.error('请选择图片文件')
+			toast.error('Please select an image file')
 			return
 		}
 
@@ -234,7 +234,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 		setAvatarItem(null)
 	}
 
-	const buttonText = isAuth ? '保存' : '导入密钥'
+	const buttonText = isAuth ? 'Save' : 'Import Key'
 
 	return (
 		<>
@@ -252,14 +252,14 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 
 			<DialogModal open={open} onClose={handleCancel} className='card max-h-[90vh] max-w-2xl overflow-y-auto'>
 				<div className='mb-6 flex items-center justify-between'>
-					<h2 className='text-xl font-semibold'>站点配置</h2>
+					<h2 className='text-xl font-semibold'>Site Configuration</h2>
 					<div className='flex gap-3'>
 						<motion.button
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 							onClick={handlePreview}
 							className='rounded-xl border bg-white/60 px-6 py-2 text-sm'>
-							预览
+							Preview
 						</motion.button>
 						<motion.button
 							whileHover={{ scale: 1.05 }}
@@ -267,10 +267,10 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 							onClick={handleCancel}
 							disabled={isSaving}
 							className='rounded-xl border bg-white/60 px-6 py-2 text-sm'>
-							取消
+							Cancel
 						</motion.button>
 						<motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={handleSaveClick} disabled={isSaving} className='brand-btn px-6'>
-							{isSaving ? '保存中...' : buttonText}
+							{isSaving ? 'Saving...' : buttonText}
 						</motion.button>
 					</div>
 				</div>
@@ -287,7 +287,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 									<img src='/favicon.png' alt='current favicon' className='h-full w-full object-cover' />
 								)}
 								<div className='pointer-events-none absolute inset-0 flex items-center justify-center rounded-lg bg-black/40 opacity-0 transition-opacity group-hover:opacity-100'>
-									<span className='text-xs text-white'>{faviconItem ? '更换' : '上传'}</span>
+									<span className='text-xs text-white'>{faviconItem ? 'Change' : 'Upload'}</span>
 								</div>
 								{faviconItem && (
 									<div className='absolute top-1 right-1 hidden group-hover:block'>
@@ -299,7 +299,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 												handleRemoveFavicon()
 											}}
 											className='rounded-md bg-white/90 px-2 py-1 text-xs text-red-500 shadow hover:bg-white'>
-											清除
+											Clean
 										</motion.button>
 									</div>
 								)}
@@ -317,7 +317,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 									<img src='/images/avatar.png' alt='current avatar' className='h-full w-full object-cover' />
 								)}
 								<div className='pointer-events-none absolute inset-0 flex items-center justify-center rounded-full bg-black/40 opacity-0 transition-opacity group-hover:opacity-100'>
-									<span className='text-xs text-white'>{avatarItem ? '更换' : '上传'}</span>
+									<span className='text-xs text-white'>{avatarItem ? 'Change' : 'Upload'}</span>
 								</div>
 								{avatarItem && (
 									<div className='absolute top-1 right-1 hidden group-hover:block'>
@@ -329,7 +329,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 												handleRemoveAvatar()
 											}}
 											className='rounded-md bg-white/90 px-2 py-1 text-xs text-red-500 shadow hover:bg-white'>
-											清除
+											Clean
 										</motion.button>
 									</div>
 								)}
@@ -339,7 +339,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 					</div>
 
 					<div>
-						<label className='mb-2 block text-sm font-medium'>站点标题</label>
+						<label className='mb-2 block text-sm font-medium'>Site Title</label>
 						<input
 							type='text'
 							value={formData.meta.title}
@@ -349,7 +349,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 					</div>
 
 					<div>
-						<label className='mb-2 block text-sm font-medium'>站点描述</label>
+						<label className='mb-2 block text-sm font-medium'>Site Description</label>
 						<textarea
 							value={formData.meta.description}
 							onChange={e => setFormData({ ...formData, meta: { ...formData.meta, description: e.target.value } })}
@@ -359,7 +359,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 					</div>
 
 					<div>
-						<label className='mb-2 block text-sm font-medium'>主题色</label>
+						<label className='mb-2 block text-sm font-medium'>Theme Color</label>
 						<div className='flex items-center gap-3'>
 							<input
 								type='color'
@@ -378,21 +378,21 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 
 					<div>
 						<div className='mb-2 flex items-center justify-between gap-3'>
-							<label className='block text-sm font-medium'>背景颜色</label>
+							<label className='block text-sm font-medium'>Background Color</label>
 							<div className='flex gap-2'>
 								<motion.button
 									whileHover={{ scale: 1.05 }}
 									whileTap={{ scale: 0.95 }}
 									onClick={handleRandomizeColors}
 									className='rounded-lg border bg-white/60 px-3 py-1 text-xs whitespace-nowrap'>
-									随机配色
+									Random Color
 								</motion.button>
 								<motion.button
 									whileHover={{ scale: 1.05 }}
 									whileTap={{ scale: 0.95 }}
 									onClick={handleAddColor}
 									className='rounded-lg border bg-white/60 px-3 py-1 text-xs whitespace-nowrap'>
-									+ 添加颜色
+									+ Add Color
 								</motion.button>
 							</div>
 						</div>
@@ -412,7 +412,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 											whileTap={{ scale: 0.95 }}
 											onClick={() => handleRemoveColor(index)}
 											className='rounded-lg border bg-white/60 px-3 py-1 text-xs whitespace-nowrap text-red-500'>
-											删除
+											Del
 										</motion.button>
 									)}
 								</div>
