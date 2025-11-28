@@ -1,57 +1,68 @@
-早上看到一篇文章：[《浏览器中液态玻璃》](https://kube.io/blog/liquid-glass-css-svg/)，文章我只能明白玻璃折射率，置换，其它的看不懂。
+## 星战风暴兵 AI算力舱
 
-但是我发现这个经过它的指引，很容易就能实现，并且我感觉好好玩。允许我在 blog 上放一段时间这个组件。
+大佬们，经过一年的筹备，懒猫家族终于上新啦：
 
-代码上**很简单**，在这个blog 仓库目录的 `components/liquid-grass` 目录。
+懒猫AI算力舱携手懒猫微服新款给大佬们准备的国庆AI好礼！
 
-## 实现
 
-逻辑是，两个**置换**，组合一个边缘。嫌麻烦可以不要边缘效果。
 
-```tsx
-const width = 210
-const height = 150
+ ##  懒猫AI算力舱X3
 
-<div
-	style={{ width, height }}
-	className='fixed top-0 left-0 z-90 select-none'
-	whileTap={{
-		scale: 1.1
-	}}>
-	<svg colorInterpolationFilters='sRGB' style={{ display: 'none' }}>
-			<defs>
-				<filter id='magnifying-glass-filter'>
-					<feImage href={displacement1.src} x='0' y='0' width={width} height={height} result='magnifying_displacement_map' />
-					<feDisplacementMap in='SourceGraphic' in2='magnifying_displacement_map' scale='24' xChannelSelector='R' yChannelSelector='G' result='magnified_source' />
-					<feGaussianBlur in='magnified_source' stdDeviation='0' result='blurred_source' />
-					<feImage href={displacement2.src} x='0' y='0' width={width} height={height} result='displacement_map' />
-					<feDisplacementMap in='blurred_source' in2='displacement_map' scale='80' xChannelSelector='R' yChannelSelector='G' result='displaced' />
-					<feColorMatrix in='displaced' type='saturate' result='displaced_saturated' values='9'></feColorMatrix>
-					<feImage href={borderImg.src} x='0' y='0' width={width} height={height} result='specular_layer'></feImage>
-					<feComposite in='displaced_saturated' in2='specular_layer' operator='in' result='specular_saturated'></feComposite>
-					<feComponentTransfer in='specular_layer' result='specular_faded'>
-						<feFuncA type='linear' slope='0.5'></feFuncA>
-					</feComponentTransfer>
-				<feBlend in='specular_saturated' in2='displaced' mode='normal' result='withSaturation'></feBlend>
-				<feBlend in='specular_faded' in2='withSaturation' mode='normal'></feBlend>
-			</filter>
-		</defs>
-	</svg>
+外型巧妙的融合了星战科幻光辉与超跑的飞驰曲线，强大算力澎湃运行，一台穿越星河的AI算力中心
 
-	<div
-		onClick={() => setIsTouched(true)}
-		className='absolute inset-0 rounded-full'
-		style={{
-			backdropFilter: 'url(#magnifying-glass-filter)',
-			boxShadow: 'rgba(0, 0, 0, 0.05) 0px 4px 9px, rgba(0, 0, 0, 0.05) 0px 2px 24px inset, rgba(255, 255, 255, 0.2) 0px -2px 24px inset'
-		}}>
-	</div>
-</div>
 
-```
+战力分析：
 
-## 原理
+1.品类：家庭私人AI超算
 
-最开始以为它只能在 svg 中实现，意味着需要把网址内容刻入到 svg，结果它并不需要，二是直接能在文档流使用，这就太**方便**了。
+2.用途：AI研究、模型推理、个人知识库
 
-只需要 svg 内容写好，**backdropFilter** 引出来用就行，虽然限制在 **chrome** 中使用，但是光是自己玩就够够的了。
+3.参数：英伟达芯片，275T澎湃真算力，64GB超大显存，70B大模型，无会员畅玩CUDA AI应用
+
+4.购买理由：AI性能怪兽、超大显存、赚钱利器，领先从拥有你的私人AI超算开始！
+
+5.典型应用：个人知识库、视频搜索、联网搜索、文生图、文生视频、网页播客、音视频文字提取等....
+
+
+
+## 懒猫微服新款
+
+外型取材于流浪地球，赛博朋克小桌搭，小小身材，巨大能量，一台来自未来赛博世界的AI数据中心
+
+
+
+战力分析：
+
+1.品类：家庭私人AI服务器
+
+2.用途：网盘相册看电影，2000多个私有云应用随心玩
+
+3.参数：7盘位全固态，高性能标压处理器，最高支持96TB存储，IO性能提升50倍，容量提升12倍
+
+4.购买理由：内网穿透直连不限速、虚拟组网免费远控、极智安全防黑客、上千应用超省钱
+
+5.典型应用：AI相册、私有网盘、懒猫智慧屏、懒猫清单、家庭影院、网盘挂载、私密云办公套件等......
+
+
+
+## 更多惊喜
+
+还有懒猫AI浏览器超强袭来，你私人的AI数据分析引擎：
+
+1.速度超快：基于Chromium内核打造，兼容性超强，速度超快
+
+2.超级隐私：去除Google追踪代码，100%隐私浏览器，超级安全很放心
+
+3.口袋超算：内置AI插件，配合算力舱和微服，手机也可在外运行70B大模型，随时随地访问家中超算
+
+4.手机插件：历时半年倾力打造，多标签手机浏览器，还可以支持Chrome插件安装
+
+5.完全免费：浏览器和AI插件完全免费，不收任何会员费，无限Tokens畅游AI世界
+
+## 预售火爆开启
+
+AI时代，领先，从拥有你的私人AI超算开始！
+
+
+
+更多详情请查看 https://lazycat.cloud/
