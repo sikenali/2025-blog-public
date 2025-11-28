@@ -4,10 +4,10 @@ import { CARD_SPACING } from '@/consts'
 import { styles as hiCardStyles } from './hi-card'
 import { styles as clockCardStyles } from './clock-card'
 import dayjs from 'dayjs'
-import 'dayjs/locale/zh-cn'
+import 'dayjs/locale/en-us'
 import { cn } from '@/lib/utils'
 
-dayjs.locale('zh-cn')
+dayjs.locale('en-us')
 
 export const styles = {
 	width: 350,
@@ -62,4 +62,4 @@ export default function CalendarCard() {
 	)
 }
 
-const dates = ['一', '二', '三', '四', '五', '六', '日']
+const dates = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
