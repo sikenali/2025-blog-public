@@ -64,8 +64,8 @@ export default function SocialButtons() {
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 							className='card relative flex items-center gap-2 rounded-xl px-3 py-2.5 font-medium whitespace-nowrap'>
-							<XSVG className='h-6 w-6' />
-							X
+							<XSVG />
+							Twitter
 						</motion.a>
 					)}
 
