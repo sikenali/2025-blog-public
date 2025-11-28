@@ -4,10 +4,10 @@ import { CARD_SPACING } from '@/consts'
 import { styles as hiCardStyles } from './hi-card'
 import { styles as clockCardStyles } from './clock-card'
 import dayjs from 'dayjs'
-import 'dayjs/locale/en-us'
+import 'dayjs/locale/en'
 import { cn } from '@/lib/utils'
 
-dayjs.locale('en-us')
+dayjs.locale('en')
 
 export const styles = {
 	width: 350,
