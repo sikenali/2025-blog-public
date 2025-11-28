@@ -23,11 +23,11 @@ export default function ArticleCard() {
 			x={center.x + hiCardStyles.width / 2 - socialButtonsStyles.width - CARD_SPACING - styles.width}
 			y={center.y + hiCardStyles.height / 2 + CARD_SPACING}
 			className='space-y-2 max-sm:static'>
-			<h2 className='text-secondary text-sm'>最新文章</h2>
+			<h2 className='text-secondary text-sm'>Published</h2>
 
 			{loading ? (
 				<div className='flex h-[60px] items-center justify-center'>
-					<span className='text-secondary text-xs'>加载中...</span>
+					<span className='text-secondary text-xs'>loading...</span>
 				</div>
 			) : blog ? (
 				<Link href={`/blog/${blog.slug}`} className='flex transition-opacity hover:opacity-80'>
@@ -44,7 +44,7 @@ export default function ArticleCard() {
 				</Link>
 			) : (
 				<div className='flex h-[60px] items-center justify-center'>
-					<span className='text-secondary text-xs'>暂无文章</span>
+					<span className='text-secondary text-xs'>No Post</span>
 				</div>
 			)}
 		</Card>

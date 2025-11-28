@@ -28,7 +28,7 @@ export default function MusicCard() {
 			<MusicSVG className='h-8 w-8' />
 
 			<div className='flex-1'>
-				<div className='text-secondary text-sm'>随机音乐</div>
+				<div className='text-secondary text-sm'>Music</div>
 
 				<div className='mt-1 h-2 rounded-full bg-white/60'>
 					<div className='bg-linear h-full w-1/2 rounded-full' />

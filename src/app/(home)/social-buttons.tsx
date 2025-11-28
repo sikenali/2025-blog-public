@@ -2,7 +2,7 @@ import { useCenterStore } from '@/hooks/use-center'
 import GithubSVG from '@/svgs/github.svg'
 import { ANIMATION_DELAY, CARD_SPACING } from '@/consts'
 import { styles as hiCardStyles } from './hi-card'
-import JuejinSVG from '@/svgs/juejin.svg'
+import XSVG from '@/svgs/x.svg'
 import EmailSVG from '@/svgs/email.svg'
 import { motion } from 'motion/react'
 import { useEffect, useState } from 'react'
@@ -42,7 +42,7 @@ export default function SocialButtons() {
 				<div className='absolute top-0 right-0 flex items-center gap-3 max-sm:static'>
 					{tertiaryShow && (
 						<motion.a
-							href='https://github.com/yysuni'
+							href='https://github.com/sikenali'
 							target='_blank'
 							initial={{ opacity: 0, scale: 0.6 }}
 							animate={{ opacity: 1, scale: 1 }}
@@ -57,22 +57,22 @@ export default function SocialButtons() {
 
 					{secondaryShow && (
 						<motion.a
-							href='https://juejin.cn/user/2427311675422382'
+							href='https://x.com/jingle2049'
 							target='_blank'
 							initial={{ opacity: 0, scale: 0.6 }}
 							animate={{ opacity: 1, scale: 1 }}
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 							className='card relative flex items-center gap-2 rounded-xl px-3 py-2.5 font-medium whitespace-nowrap'>
-							<JuejinSVG className='h-6 w-6' />
-							稀土掘金
+							<XSVG className='h-6 w-6' />
+							X
 						</motion.a>
 					)}
 
 					<motion.button
 						onClick={() => {
-							navigator.clipboard.writeText('yysuni1001@gmail.com').then(() => {
-								toast.success('邮箱已复制到剪贴板')
+							navigator.clipboard.writeText('jingle@111.com').then(() => {
+								toast.success('Email has been copied to the clipboard')
 							})
 						}}
 						initial={{ opacity: 0, scale: 0.6 }}
