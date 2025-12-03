@@ -1,33 +1,29 @@
 import Card from '@/components/card'
 import { useCenterStore } from '@/hooks/use-center'
 import { useLatestBlog } from '@/hooks/use-blog-index'
-import { styles as hiCardStyles } from './hi-card'
-import { styles as socialButtonsStyles } from './social-buttons'
+import { useConfigStore } from './stores/config-store'
 import { CARD_SPACING } from '@/consts'
 import dayjs from 'dayjs'
 import Link from 'next/link'
 
-export const styles = {
-	width: 266,
-	order: 8
-}
-
 export default function ArticleCard() {
 	const center = useCenterStore()
+	const { cardStyles } = useConfigStore()
 	const { blog, loading } = useLatestBlog()
+	const styles = cardStyles.articleCard
+	const hiCardStyles = cardStyles.hiCard
+	const socialButtonsStyles = cardStyles.socialButtons
+
+	const x = styles.offsetX !== null ? center.x + styles.offsetX : center.x + hiCardStyles.width / 2 - socialButtonsStyles.width - CARD_SPACING - styles.width
+	const y = styles.offsetY !== null ? center.y + styles.offsetY : center.y + hiCardStyles.height / 2 + CARD_SPACING
 
 	return (
-		<Card
-			order={styles.order}
-			width={styles.width}
-			x={center.x + hiCardStyles.width / 2 - socialButtonsStyles.width - CARD_SPACING - styles.width}
-			y={center.y + hiCardStyles.height / 2 + CARD_SPACING}
-			className='space-y-2 max-sm:static'>
-			<h2 className='text-secondary text-sm'>Published</h2>
+		<Card order={styles.order} width={styles.width} x={x} y={y} className='space-y-2 max-sm:static'>
+			<h2 className='text-secondary text-sm'>最新文章</h2>
 
 			{loading ? (
 				<div className='flex h-[60px] items-center justify-center'>
-					<span className='text-secondary text-xs'>loading...</span>
+					<span className='text-secondary text-xs'>加载中...</span>
 				</div>
 			) : blog ? (
 				<Link href={`/blog/${blog.slug}`} className='flex transition-opacity hover:opacity-80'>
@@ -44,7 +40,7 @@ export default function ArticleCard() {
 				</Link>
 			) : (
 				<div className='flex h-[60px] items-center justify-center'>
-					<span className='text-secondary text-xs'>No Post</span>
+					<span className='text-secondary text-xs'>暂无文章</span>
 				</div>
 			)}
 		</Card>
