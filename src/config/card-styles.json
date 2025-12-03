@@ -4,35 +4,35 @@
 		"height": 200,
 		"order": 3,
 		"offsetX": null,
-		"offsetY": null
+		"offsetY": -144
 	},
 	"hiCard": {
 		"width": 360,
 		"height": 288,
-		"order": 4,
+		"order": 1,
 		"offsetX": null,
 		"offsetY": null
 	},
 	"clockCard": {
-		"width": 180,
-		"height": 100,
+		"width": 200,
+		"height": 110,
 		"offset": 92,
-		"order": 5,
+		"order": 4,
 		"offsetX": null,
-		"offsetY": null
+		"offsetY": 144
 	},
 	"calendarCard": {
-		"width": 280,
-		"height": 220,
-		"order": 6,
+		"width": 300,
+		"height": 240,
+		"order": 5,
 		"offsetX": null,
-		"offsetY": null
+		"offsetY": 144
 	},
 	"musicCard": {
 		"width": 293,
 		"height": 66,
 		"offset": 120,
-		"order": 9,
+		"order": 6,
 		"offsetX": null,
 		"offsetY": null
 	},
@@ -40,24 +40,24 @@
 		"width": 280,
 		"height": 48,
 		"order": 3,
-		"offsetX": null,
+		"offsetX": 460,
 		"offsetY": null
 	},
 	"shareCard": {
 		"width": 200,
 		"order": 7,
 		"offsetX": null,
-		"offsetY": null
+		"offsetY": 254
 	},
 	"articleCard": {
 		"width": 266,
 		"order": 8,
 		"offsetX": null,
-		"offsetY": null
+		"offsetY": 254
 	},
 	"writeButtons": {
 		"height": 42,
-		"order": 10,
+		"order": 9,
 		"offsetX": null,
 		"offsetY": null
 	},
@@ -65,7 +65,7 @@
 		"width": 280,
 		"height": 434,
 		"order": 2,
-		"offsetX": null,
-		"offsetY": null
+		"offsetX": 460,
+		"offsetY": -217
 	}
 }
