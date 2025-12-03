@@ -1,16 +1,28 @@
 {
 	"meta": {
-		"title": "Jingle",
-		"description": "Jingle ‘s Blog"
+		"title": "YYsuni",
+		"description": "YYsuni 的个人博客，记录前端开发、探索笔记。前端 UI 更新代码仓库。"
 	},
 	"theme": {
-		"colorBrand": "#C6B9B2"
+		"colorBrand": "#de4331",
+		"colorPrimary": "#4E3F42",
+		"colorSecondary": "#7b888e",
+		"colorBrandSecondary": "#FCC841",
+		"colorBg": "#eeeeee",
+		"colorBorder": "#ffffff",
+		"colorCard": "#ffffff66",
+		"colorArticle": "#ffffffcc"
 	},
-	"backgroundColors": [
-		"#A617DE",
-		"#142621",
-		"#39C32D",
-		"#2479D9",
-		"#E62BBC"
-	]
+	"backgroundColors": ["#FCC841", "#DFEFFC", "#DEDE92", "#DE4331", "#FE9750", "#FCC841"],
+	"artImages": [
+		{
+			"id": "cat",
+			"url": "/images/art/cat.png"
+		},
+		{
+			"id": "a46372ff45bc5524",
+			"url": "/images/art/a46372ff45bc5524.jpg"
+		}
+	],
+	"currentArtImageId": "a46372ff45bc5524"
 }
