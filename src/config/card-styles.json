@@ -3,8 +3,8 @@
 		"width": 360,
 		"height": 200,
 		"order": 3,
-		"offsetX": null,
-		"offsetY": null
+		"offsetX": 229,
+		"offsetY": -246
 	},
 	"hiCard": {
 		"width": 360,
@@ -18,8 +18,8 @@
 		"height": 132,
 		"offset": 92,
 		"order": 4,
-		"offsetX": null,
-		"offsetY": null
+		"offsetX": 222,
+		"offsetY": 345
 	},
 	"calendarCard": {
 		"width": 350,
@@ -33,15 +33,15 @@
 		"height": 66,
 		"offset": 120,
 		"order": 6,
-		"offsetX": null,
-		"offsetY": null
+		"offsetX": 220,
+		"offsetY": 251
 	},
 	"socialButtons": {
-		"width": 315,
+		"width": 280,
 		"height": 48,
 		"order": 6,
-		"offsetX": null,
-		"offsetY": null
+		"offsetX": -497,
+		"offsetY": 161
 	},
 	"shareCard": {
 		"width": 200,
@@ -54,8 +54,8 @@
 		"width": 266,
 		"height": 160,
 		"order": 8,
-		"offsetX": null,
-		"offsetY": null
+		"offsetX": -472,
+		"offsetY": 277
 	},
 	"writeButtons": {
 		"height": 42,
@@ -75,7 +75,7 @@
 		"width": 54,
 		"height": 54,
 		"order": 8,
-		"offsetX": null,
-		"offsetY": null
+		"offsetX": 538,
+		"offsetY": 261
 	}
 }
