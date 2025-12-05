@@ -2,7 +2,7 @@ import { useCenterStore } from '@/hooks/use-center'
 import GithubSVG from '@/svgs/github.svg'
 import { ANIMATION_DELAY, CARD_SPACING } from '@/consts'
 import { useConfigStore } from './stores/config-store'
-import XSVG from '@/svgs/x.svg'
+import JuejinSVG from '@/svgs/juejin.svg'
 import EmailSVG from '@/svgs/email.svg'
 import { motion } from 'motion/react'
 import { useEffect, useState, useMemo } from 'react'
@@ -10,7 +10,7 @@ import { toast } from 'sonner'
 import { useSize } from '@/hooks/use-size'
 import { HomeDraggableLayer } from './home-draggable-layer'
 
-type SocialButtonType = 'github' | 'x' | 'email' | 'link'
+type SocialButtonType = 'github' | 'juejin' | 'email' | 'link'
 
 interface SocialButtonConfig {
 	id: string
@@ -81,7 +81,7 @@ export default function SocialButtons() {
 					</motion.a>
 				)
 
-			case 'x':
+			case 'juejin':
 				return (
 					<motion.a
 						key={button.id}
@@ -89,7 +89,7 @@ export default function SocialButtons() {
 						target='_blank'
 						{...commonProps}
 						className='card relative flex items-center gap-2 rounded-xl px-3 py-2.5 font-medium whitespace-nowrap'>
-						<XSVG className='h-6 w-6' />
+						<JuejinSVG  className='h-6 w-6' />
 						{button.label || 'X'}
 					</motion.a>
 				)
