@@ -25,8 +25,8 @@
 		"enabled": true
 	},
 	"calendarCard": {
-		"width": 175,
-		"height": 143,
+		"width": 350,
+		"height": 286,
 		"order": 5,
 		"offsetX": 216,
 		"offsetY": 150,
