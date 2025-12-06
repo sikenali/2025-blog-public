@@ -50,11 +50,11 @@
 		"enabled": true
 	},
 	"shareCard": {
-		"width": 200,
-		"height": 180,
+		"width": 262,
+		"height": 168,
 		"order": 7,
-		"offsetX": 240,
-		"offsetY": 92,
+		"offsetX": 211,
+		"offsetY": 91,
 		"enabled": true
 	},
 	"articleCard": {
