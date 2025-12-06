@@ -23,11 +23,11 @@
 			"url": "/images/art/cat.png"
 		},
 		{
-			"id": "a46372ff45bc5524",
-			"url": "/images/art/a46372ff45bc5524.jpg"
+			"id": "a1129b8effb45ecb",
+			"url": "/images/art/a1129b8effb45ecb.jpg"
 		}
 	],
-	"currentArtImageId": "a46372ff45bc5524",
+	"currentArtImageId": "a1129b8effb45ecb",
 	"backgroundImages": [
 		{
 			"id": "",
@@ -53,7 +53,7 @@
 		{
 			"id": "x",
 			"type": "x",
-			"value": "https://juejin.cn/user/2427311675422382",
+			"value": "https://x.com/jingle2049",
 			"label": "Twitter",
 			"order": 2
 		},
