@@ -1,32 +1,31 @@
 {
 	"meta": {
-		"title": "Jingle",
-		"description": "Jingle 的个人博客。"
+		"title": "YYsuni",
+		"description": "YYsuni 的个人博客，记录前端开发、探索笔记。前端 UI 更新代码仓库。",
+		"username": "Suni"
 	},
 	"theme": {
-		"colorBrand": "#2a48f3",
-		"colorPrimary": "#e6e8e8",
-		"colorSecondary": "#acadae",
-		"colorBrandSecondary": "#51d0b9",
-		"colorBg": "#0a051f",
-		"colorBorder": "#8a8a8a5e",
-		"colorCard": "#ffffff0e",
-		"colorArticle": "#6f6f6f33"
+		"colorBrand": "#de4331",
+		"colorPrimary": "#4E3F42",
+		"colorSecondary": "#7b888e",
+		"colorBrandSecondary": "#FCC841",
+		"colorBg": "#eeeeee",
+		"colorBorder": "#ffffff",
+		"colorCard": "#ffffff66",
+		"colorArticle": "#ffffffcc"
 	},
-	"backgroundColors": [
-		"#16007b"
-	],
+	"backgroundColors": ["#FCC841", "#DFEFFC", "#DEDE92", "#DE4331", "#FE9750", "#FCC841"],
 	"artImages": [
+		{
+			"id": "cat",
+			"url": "/images/art/cat.png"
+		},
 		{
 			"id": "a46372ff45bc5524",
 			"url": "/images/art/a46372ff45bc5524.jpg"
-		},
-		{
-			"id": "a1129b8effb45ecb",
-			"url": "/images/art/a1129b8effb45ecb.jpg"
 		}
 	],
-	"currentArtImageId": "a1129b8effb45ecb",
+	"currentArtImageId": "a46372ff45bc5524",
 	"backgroundImages": [
 		{
 			"id": "",
@@ -38,23 +37,24 @@
 		{
 			"id": "github",
 			"type": "github",
-			"value": "https://github.com/sikenali",
+			"value": "https://github.com/yysuni",
 			"label": "Github",
 			"order": 3
 		},
 		{
 			"id": "juejin",
 			"type": "juejin",
-			"value": "https://x.com/jingle2049",
-			"label": "Twitter",
+			"value": "https://juejin.cn/user/2427311675422382",
+			"label": "稀土掘金",
 			"order": 2
 		},
 		{
 			"id": "email",
 			"type": "email",
-			"value": "jingle@111.com",
+			"value": "yysuni1001@gmail.com",
 			"label": "",
 			"order": 1
 		}
-	]
+	],
+	"clockShowSeconds": false
 }
