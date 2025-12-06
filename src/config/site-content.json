@@ -36,24 +36,31 @@
 	],
 	"currentBackgroundImageId": "",
 	"socialButtons": [
-		{
+		  {
+			"id": "wechat",
+			"type": "wechat",
+			"value": "https://i.imgant.com/v2/zyMqAw7.jpeg",
+			"label": "",
+			"order": 4
+		},
+        {
 			"id": "github",
 			"type": "github",
-			"value": "https://github.com/yysuni",
+			"value": "https://github.com/sikenali",
 			"label": "Github",
 			"order": 3
 		},
 		{
-			"id": "juejin",
-			"type": "juejin",
+			"id": "x",
+			"type": "x",
 			"value": "https://juejin.cn/user/2427311675422382",
-			"label": "稀土掘金",
+			"label": "Twitter",
 			"order": 2
 		},
 		{
 			"id": "email",
 			"type": "email",
-			"value": "yysuni1001@gmail.com",
+			"value": "jingle@111.com",
 			"label": "",
 			"order": 1
 		}
