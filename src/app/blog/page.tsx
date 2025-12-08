@@ -385,7 +385,7 @@ export default function BlogPage() {
 							href='https://www.10012049.xyz'
 							target='_blank'
 							className='card text-secondary static inline-flex items-center gap-2 rounded-xl px-4 py-2 text-xs'>
-							<WechatSVG className='h-4 w-4' />
+							<juejinSVG className='h-4 w-4' />
 							更多
 						</motion.a>
 					</div>
