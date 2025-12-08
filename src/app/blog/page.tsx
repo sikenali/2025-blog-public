@@ -12,7 +12,7 @@ import { ANIMATION_DELAY, INIT_DELAY } from '@/consts'
 import ShortLineSVG from '@/svgs/short-line.svg'
 import { useBlogIndex, type BlogIndexItem } from '@/hooks/use-blog-index'
 import { useReadArticles } from '@/hooks/use-read-articles'
-import JuejinSVG from '@/svgs/juejin.svg'
+import WechatSVG from '@/svgs/wechat.svg'
 import { useAuthStore } from '@/hooks/use-auth'
 import { useConfigStore } from '@/app/(home)/stores/config-store'
 import { readFileAsText } from '@/lib/file-utils'
@@ -385,7 +385,7 @@ export default function BlogPage() {
 							href='https://www.10012049.xyz'
 							target='_blank'
 							className='card text-secondary static inline-flex items-center gap-2 rounded-xl px-4 py-2 text-xs'>
-							<juejinSVG className='h-4 w-4' />
+							<WechatSVG className='h-4 w-4' />
 							更多
 						</motion.a>
 					</div>
