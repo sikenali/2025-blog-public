@@ -1,23 +1,22 @@
 [
 	{
-		"name": "iLoveIMG",
-		"url": "https://www.iloveimg.com/zh-cn",
-		"logo": "/images/share/7e91e93e3cdd586b.svg",
-		"description": "免费图片处理网站，我经常用来压缩图片，压缩效果会比 Tinypng 更好。链式处理功能非常好用。",
+		"name": "GreenVideo",
+		"url": "https://greenvideo.cc",
+		"logo": "https://greenvideo.cc/favicon.ico",
+		"description": "GreenVideo支持全球众多社交网络及视频平台的视频下载。",
 		"tags": [
-			"图片"
+			"视频"
 		],
 		"stars": 4
 	},
 	{
-		"name": "TinyPNG",
-		"url": "https://tinypng.com/",
-		"logo": "https://tinypng.com/static/images/george-anim/large_george_x2.webp",
-		"description": "国际上比较出名的压缩图片工具，过去的书本中知晓的这个网站，但是有图片大小限制，也有数量限制。挺好的压缩图片替代品。",
+		"name": "ImgAnt ",
+		"url": "https://imgant.com/",
+		"logo": "https://imgant.com/favicon.ico",
+		"description": "ImgAnt 图床专注于稳定存储与全球分发，基于 imgant.com 域名提供服务。",
 		"tags": [
 			"图片"
 		],
-		"stars": 3
+		"stars": 4
 	}
-	
 ]
