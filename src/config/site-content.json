@@ -36,25 +36,25 @@
 	],
 	"currentBackgroundImageId": "",
 	"socialButtons": [
-		  {
+		{
 			"id": "wechat",
 			"type": "wechat",
-			"value": "https://i.imgant.com/v2/zyMqAw7.jpeg",
+			"value": "/images/social-buttons/4fc5591ec12cb18b.jpg",
 			"label": "",
 			"order": 4
 		},
-        {
+		{
 			"id": "github",
 			"type": "github",
 			"value": "https://github.com/sikenali",
-			"label": "Github",
+			"label": "",
 			"order": 3
 		},
 		{
 			"id": "x",
 			"type": "x",
 			"value": "https://x.com/jingle2049",
-			"label": "Twitter",
+			"label": "",
 			"order": 2
 		},
 		{
