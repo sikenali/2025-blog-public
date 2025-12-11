@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "bid-assistant",
+    "title": "使用Trae Solo手搓省钱利器！",
+    "tags": [
+      "ai",
+      "file-diff",
+      "trae"
+    ],
+    "date": "2025-12-11",
+    "summary": "为省钱手搓软件，用作日常工作协助使用",
+    "cover": "/blogs/bid-assistant/81a2860d470c5851.png",
+    "hidden": true
+  },
+  {
+    "slug": "ai-pics",
+    "title": "一张电影截图生成 3*3 或 4*3的图片",
+    "tags": [],
+    "date": "2025-12-05",
+    "summary": "",
+    "cover": "/blogs/ai-pics/a1129b8effb45ecb.jpg"
+  },
+  {
+    "slug": "dtolpk-tool",
+    "title": "使用Trae Solo手搓挣钱利器！！",
+    "tags": [
+      "lpk",
+      "docker",
+      "懒猫微服",
+      "ide",
+      "ai"
+    ],
+    "date": "2025-11-30",
+    "summary": "ai工具将命令行工具转换成图形化界面",
+    "cover": "/blogs/dtolpk-tool/4faf918c1b9878fe.jpeg"
+  },
+  {
+    "slug": "ai-pod",
+    "title": "懒猫家族来新成员啦~~",
+    "tags": [
+      "nas",
+      "ai",
+      "懒猫微服",
+      "算力舱"
+    ],
+    "date": "2025-09-19",
+    "summary": "新品发布",
+    "cover": "/blogs/ai-pod/123dbc61c0b164dc.png"
+  }
+]
