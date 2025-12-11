@@ -1,5 +1,18 @@
 [
   {
+    "slug": "bid-assistant",
+    "title": "使用Trae Solo手搓省钱利器！",
+    "tags": [
+      "ai",
+      "file-diff",
+      "trae"
+    ],
+    "date": "2025-12-11",
+    "summary": "为省钱手搓软件，用作日常工作协助使用",
+    "cover": "/blogs/bid-assistant/81a2860d470c5851.png",
+    "hidden": false
+  },
+  {
     "slug": "ai-pics",
     "title": "一张电影截图生成 3*3 或 4*3的图片",
     "tags": [],
