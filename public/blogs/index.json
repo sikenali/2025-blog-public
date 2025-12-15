@@ -10,7 +10,8 @@
     "date": "2025-12-11",
     "summary": "为省钱手搓软件，用作日常工作协助使用",
     "cover": "/blogs/bid-assistant/81a2860d470c5851.png",
-    "hidden": false
+    "hidden": false,
+    "category": "手搓系列"
   },
   {
     "slug": "ai-pics",
@@ -18,7 +19,8 @@
     "tags": [],
     "date": "2025-12-05",
     "summary": "",
-    "cover": "/blogs/ai-pics/a1129b8effb45ecb.jpg"
+    "cover": "/blogs/ai-pics/a1129b8effb45ecb.jpg",
+    "category": "ai系列"
   },
   {
     "slug": "dtolpk-tool",
@@ -32,7 +34,8 @@
     ],
     "date": "2025-11-30",
     "summary": "ai工具将命令行工具转换成图形化界面",
-    "cover": "/blogs/dtolpk-tool/4faf918c1b9878fe.jpeg"
+    "cover": "/blogs/dtolpk-tool/4faf918c1b9878fe.jpeg",
+    "category": "手搓系列"
   },
   {
     "slug": "ai-pod",
@@ -45,6 +48,7 @@
     ],
     "date": "2025-09-19",
     "summary": "新品发布",
-    "cover": "/blogs/ai-pod/123dbc61c0b164dc.png"
+    "cover": "/blogs/ai-pod/123dbc61c0b164dc.png",
+    "category": "懒猫系列"
   }
 ]
