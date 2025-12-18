@@ -8,7 +8,7 @@
 
 ## Prompt
 
-> 比较适合电影质感的图片。
+> 选择你需要生成的二维码。
 
 ![](/blogs/ai-qrcode/65e1dd99f0aa10ae.png)
 
