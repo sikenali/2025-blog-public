@@ -166,6 +166,8 @@ const LiquidGrass = dynamic(() => import('@/components/liquid-grass'), { ssr: fa
 3. 静态资源放在 `public/` 目录
 4. 博客内容存储在 `public/blogs/` 目录
 
+tg 群：1月1号，才创建的 tg 群 https://t.me/public_blog_2025
+
 
 ## 许可证
 
