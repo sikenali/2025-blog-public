@@ -35,6 +35,23 @@ async function loadShiki() {
 	}
 }
 
+// Lazy load katex to handle environments where it's not available (e.g., Cloudflare Workers)
+let katexModule: typeof import('katex') | null = null
+let katexLoadAttempted = false
+
+async function loadKatex() {
+	if (katexLoadAttempted) return katexModule
+	katexLoadAttempted = true
+
+	try {
+		katexModule = await import('katex')
+		return katexModule
+	} catch (error) {
+		console.warn('Failed to load katex module:', error)
+		return null
+	}
+}
+
 export async function renderMarkdown(markdown: string): Promise<MarkdownRenderResult> {
 	// Pre-process with marked lexer first
 	const tokens = marked.lexer(markdown)
@@ -116,7 +133,11 @@ export async function renderMarkdown(markdown: string): Promise<MarkdownRenderRe
 
 	renderer.listitem = (token: Tokens.ListItem) => {
 		// Render inline markdown inside list items (e.g. links, emphasis)
-		const inner = token.tokens ? (marked.parser(token.tokens) as string) : token.text
+		let inner = token.text
+		let tokens = token.tokens
+
+		if (token.task) tokens = tokens.slice(1)
+		inner = marked.parser(tokens) as string
 
 		if (token.task) {
 			const checkbox = token.checked ? '<input type="checkbox" checked disabled />' : '<input type="checkbox" disabled />'
@@ -126,8 +147,79 @@ export async function renderMarkdown(markdown: string): Promise<MarkdownRenderRe
 		return `<li>${inner}</li>\n`
 	}
 
+	const katex = await loadKatex()
+	const renderMath = (content: string, displayMode: boolean) => {
+		if (!katex) {
+			// Keep original delimiters if katex is not available
+			return displayMode ? `$$${content}$$` : `$${content}$`
+		}
+
+		try {
+			return katex.renderToString(content, {
+				displayMode,
+				throwOnError: false,
+				output: 'html',
+				strict: 'ignore'
+			})
+		} catch {
+			return displayMode ? `$$${content}$$` : `$${content}$`
+		}
+	}
+
 	marked.use({
-		renderer
+		renderer,
+		extensions: [
+			// Block math: $$ ... $$
+			{
+				name: 'mathBlock',
+				level: 'block',
+				start(src: string) {
+					return src.indexOf('$$')
+				},
+				tokenizer(src: string) {
+					const match = src.match(/^\$\$([\s\S]+?)\$\$(?:\n+|$)/)
+					if (!match) return
+					return {
+						type: 'mathBlock',
+						raw: match[0],
+						text: match[1].trim()
+					} as any
+				},
+				renderer(token: any) {
+					return `${renderMath(token.text || '', true)}\n`
+				}
+			},
+			// Inline math: $ ... $
+			{
+				name: 'mathInline',
+				level: 'inline',
+				start(src: string) {
+					const idx = src.indexOf('$')
+					return idx === -1 ? undefined : idx
+				},
+				tokenizer(src: string) {
+					// Avoid $$ (block) and escaped dollars
+					if (src.startsWith('$$')) return
+					if (src.startsWith('\\$')) return
+
+					const match = src.match(/^\$([^\n$]+?)\$/)
+					if (!match) return
+
+					const inner = match[1]
+					// Heuristic: require some non-space content
+					if (!inner || !inner.trim()) return
+
+					return {
+						type: 'mathInline',
+						raw: match[0],
+						text: inner.trim()
+					} as any
+				},
+				renderer(token: any) {
+					return renderMath(token.text || '', false)
+				}
+			}
+		]
 	})
 	const html = (marked.parser(tokens) as string) || ''
 
