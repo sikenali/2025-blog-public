@@ -1,5 +1,15 @@
 [
   {
+    "slug": "my-life",
+    "title": "我的【钠】五年",
+    "tags": [],
+    "date": "2026-02-06T09:00",
+    "summary": "我的【钠】五年",
+    "cover": "/blogs/my-life/24b5979862c0f54e.png",
+    "hidden": false,
+    "category": "生活点滴"
+  },
+  {
     "slug": "ai-qrcode",
     "title": "让二维码充满立体感！！！",
     "tags": [
